@@ -1,0 +1,4 @@
+archived/*
+__pycache__/*
+*.db
+*.csv
