@@ -34,7 +34,7 @@ class Government:
                         leaders[nation] = leader
 
         return leaders
-    
+
     def this_nation(self, row):
         if row.th and row.th.contents[-2] and row.th.contents[-2].string:
             return row.th.contents[-2].string
