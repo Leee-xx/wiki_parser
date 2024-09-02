@@ -4,10 +4,14 @@ import re
 import pprint
 
 class LargestCity:
-    URL = 'https://en.wikipedia.org/wiki/List_of_countries_by_largest_and_second_largest_cities'
+    #URL = 'https://en.wikipedia.org/wiki/List_of_countries_by_largest_and_second_largest_cities'
+    URL = 'https://worldwideinterpreters.com.au/2024/04/17/the-largest-city-in-every-country/'
 
     def __init__(self):
-        self.table = Table(self.URL).tables[0]
+        import pdb
+        self.table = Table(self.URL)
+        pdb.set_trace()
+        #self.table = Table(self.URL).tables[0]
         self.data = self.to_dicts()
 
     def to_dicts(self):
