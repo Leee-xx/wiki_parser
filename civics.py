@@ -1,12 +1,13 @@
 from government import Government
-from largest_city import LargestCity
+#from largest_city import LargestCity
 from csv_writer import CsvWriter
 import pprint
 from country_utils import CountryUtils
 
+'''
 class Civics:
     def __init__(self):
-        self.cities = LargestCity()
+        #self.cities = LargestCity()
         self.leaders = Government()
 
     def write_csv(self):
@@ -28,7 +29,7 @@ class Civics:
         csv.archive()
 
     def combine_data(self):
-        cities = self.cities.data
+        cities = {}#self.cities.data
         leaders = self.leaders.data
         combined = {}
         pp = pprint.PrettyPrinter()
@@ -57,3 +58,16 @@ class Civics:
         return data
 
 Civics().write_csv()
+'''
+
+Government().write_csv()
+'''
+problems = ['Belarus', 'Bosnia and Herzegovina', 'Haiti', 'Sudan', 'Switzerland', 'Turkmenistan']
+for nation in problems:
+    if nation in leaders:
+        print(f'{nation}: {leaders[nation]}')
+    else:
+        print(f'{nation} not in leaders!')
+'''
+#pp = pprint.PrettyPrinter()
+#pp.pprint(leaders)
